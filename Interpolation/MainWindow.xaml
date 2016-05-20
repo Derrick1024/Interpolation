@@ -1,0 +1,39 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Interpolation"
+        xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing" x:Class="Interpolation.MainWindow"
+        mc:Ignorable="d"
+        Title="一维线性插值 ^_^" Height="223" Width="626" ShowInTaskbar="True" ResizeMode="NoResize" Topmost="True" WindowStyle="ThreeDBorderWindow" Icon="www.ico.la_f7794f39e580ae5bbfc2ce8103b51cfc_128X128.ico">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle Fill="#003A3A6C" Margin="144.5,74.125,307,0" Stroke="#FF1F2036" StrokeThickness="2" Height="49.75" VerticalAlignment="Top"/>
+
+        <Rectangle Fill="#003A3A6C" Height="49.75" Margin="144.5,26.5,307,0" Stroke="#FF1F2036" VerticalAlignment="Top" StrokeThickness="2"/>
+        <Rectangle Fill="#003A3A6C" Margin="0,26.5,140.5,0" Stroke="#FF1F2036" StrokeThickness="2" HorizontalAlignment="Right" Height="49.75" VerticalAlignment="Top" Width="168.5"/>
+
+        <Rectangle Fill="#003A3A6C" Margin="0,74.125,140.5,0" Stroke="#FF1F2036" StrokeThickness="2" Width="168.5" HorizontalAlignment="Right" VerticalAlignment="Top" Height="49.75"/>
+
+        <Rectangle Fill="#003A3A6C" Margin="0,26.5,21.251,0" Stroke="#FF1F2036" StrokeThickness="2" HorizontalAlignment="Right" Width="121.166" Height="97.375" VerticalAlignment="Top"/>
+
+        <Rectangle Fill="#003A3A6C" Margin="25.334,26.5,0,0" Stroke="#FF1F2036" StrokeThickness="2" HorizontalAlignment="Left" Width="121.166" Height="97.375" VerticalAlignment="Top"/>
+        <TextBox x:Name="X_1" Height="24" Margin="155,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center" d:LayoutOverrides="TopMargin, BottomMargin" HorizontalAlignment="Left" Width="100"/>
+        <TextBox x:Name="X_2" Margin="155,83.5,0,0" TextWrapping="Wrap" FontSize="16" FontWeight="Bold" TextAlignment="Center" HorizontalAlignment="Left" Width="100" Height="24" VerticalAlignment="Top"/>
+        <TextBox x:Name="Y_1" Height="24" Margin="0,38,158.5,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" TextAlignment="Center" d:LayoutOverrides="TopMargin, BottomMargin" HorizontalAlignment="Right" Width="100"/>
+        <TextBox x:Name="Y_2" Margin="0,84,158.5,0" TextWrapping="Wrap" TextAlignment="Center" FontSize="16" FontWeight="Bold" Width="100" Height="24" VerticalAlignment="Top" HorizontalAlignment="Right"/>
+        <TextBox x:Name="Interp_1" HorizontalAlignment="Left" Height="24" Margin="34,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" FontSize="16" FontWeight="Bold" TextAlignment="Center" d:LayoutOverrides="VerticalAlignment, LeftMargin, RightMargin"/>
+        <TextBox x:Name="Interp_2" Margin="0,64,33,0" TextWrapping="Wrap" TextAlignment="Center" FontSize="16" FontWeight="Bold" d:LayoutOverrides="HorizontalAlignment" HorizontalAlignment="Right" Width="100" Height="24" VerticalAlignment="Top"/>
+        <Button x:Name="Interpolation" Content="JustDo it!" Height="35" Margin="0,0,158.5,17" VerticalAlignment="Bottom" IsDefault="True" d:LayoutOverrides="TopMargin, BottomMargin" Width="105" HorizontalAlignment="Right" Click="Interpolation_Click" />
+        <Button x:Name="Clear" Content="Clear" Height="35" Margin="0,0,16.667,17" VerticalAlignment="Bottom" IsCancel="True" d:LayoutOverrides="TopMargin, BottomMargin" HorizontalAlignment="Right" Width="105" Click="Clear_Click" />
+        <Button x:Name="About" Content="About" HorizontalAlignment="Left" Height="35" Margin="32,0,0,17" VerticalAlignment="Bottom" Width="105"  IsCancel="True" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin" Click="About_Click"/>
+        <TextBlock x:Name="textBlock1" Height="26.5" Margin="260,38,261.416,0" TextWrapping="Wrap" FontSize="18.667" FontWeight="Bold" TextAlignment="Center" VerticalAlignment="Top"><Run Text="X1    "/><Run Text=" "/><Run Text="Y1"/></TextBlock>
+        <TextBlock x:Name="textBlock2" Margin="260,81.25,261.416,0" TextWrapping="Wrap" FontSize="18.667" FontWeight="Bold" TextAlignment="Center" VerticalAlignment="Top"><Run Text="X"/><Run Text="2"/><Run Text="    "/><Run Text=" "/><Run Text="Y"/><Run Text="2"/></TextBlock>
+        <TextBlock x:Name="textBlock3" Height="27" Margin="34,32,487,0" TextWrapping="Wrap" FontWeight="Bold" TextAlignment="Center" Text="插值数据1" VerticalAlignment="Top" RenderTransformOrigin="0.49,0.528" Foreground="Red"/>
+        <TextBlock x:Name="textBlock4" Height="27" Margin="487,32,34,0" TextWrapping="Wrap" FontWeight="Bold" TextAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.49,0.528" Foreground="Red"><Run Text="插值数据"/><Run Text="2"/></TextBlock>
+
+    </Grid>
+</Window>
